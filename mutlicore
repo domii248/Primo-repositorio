@@ -1,0 +1,10 @@
+from multiprocessing import process
+
+def f(name):
+    print('hello', +name)
+
+#MAIN
+if __name__ == '__main__':
+    p = process.process(target=f, args=('bob',))
+    p.start()
+    p.join()
